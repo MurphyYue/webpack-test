@@ -93,7 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = 'fasdf'\n\n//# sourceURL=webpack:///./src/a.js?");
+eval("module.exports = 'fasdf';\n\n//# sourceURL=webpack:///./src/a.js?");
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index.css?");
 
 /***/ }),
 
@@ -104,7 +115,18 @@ eval("module.exports = 'fasdf'\n\n//# sourceURL=webpack:///./src/a.js?");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("let str = __webpack_require__(/*! ./a.js */ \"./src/a.js\")\nconsole.log(str)\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("var str = __webpack_require__(/*! ./a.js */ \"./src/a.js\");\n\nconsole.log(str + \"12\");\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n__webpack_require__(/*! ./index.less */ \"./src/index.less\");\n\nvar fn = function fn() {\n  console.log('log');\n};\n\nfn();\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/index.less":
+/*!************************!*\
+  !*** ./src/index.less ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index.less?");
 
 /***/ })
 

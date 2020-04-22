@@ -40,23 +40,10 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-      test: /\.html$/,
-        use: 'html-withimg-loader'//针对在html中直接用<img src='./img.png'/>的方式引用图片
-      },
       // {
-      //   test: /\(.png|.jpg|.gif)$/,
-      //   use: 'file-loader'//默认会在内部生成一张图片到build目录下，把生成的图片的名字返回回来
+      //   test:require.resolve("jquery"),//当代码中引入了jQuery的时候
+      //   use: 'expose-loader?$'//把$编程全局变量
       // },
-      {
-        test: /\(.png|.jpg|.gif)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 200*1024//200k
-          }
-        }//代替file-loader,做一个限制，当图片小于多少k的时候用base64来转化,否则用file-loader产生真是的图片
-      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
