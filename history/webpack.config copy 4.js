@@ -42,7 +42,7 @@ module.exports = {
     rules: [
       // {
       //   test:require.resolve("jquery"),//当代码中引入了jQuery的时候
-      //   use: 'expose-loader?$'//把$编程全局变量
+      //   use: 'expose-loader?$'//把$编程全局变量，window.$可以拿到
       // },
       {
         test: /\.js$/,
