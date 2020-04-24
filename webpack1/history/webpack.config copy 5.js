@@ -21,6 +21,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
+    // publicPath: 'http://www.xxx.com'//在所有资源路径前都加上这个公共路径
   },
   plugins: [//插件使用顺序无先后
     new HtmlWebpackPlugin({
@@ -29,7 +30,7 @@ module.exports = {
       hash: true,
     }),
     new MiniCssExtractPlugin({
-      filename: 'main.css'
+      filename: 'css/main.css'//css下的main.css
     }),
     // new webpack.ProvidePlugin({
     //   $: "jquery"//在每个模块中都注入$
@@ -45,15 +46,18 @@ module.exports = {
         use: 'html-withimg-loader'//针对在html中直接用<img src='./img.png'/>的方式引用图片
       },
       // {
-      //   test: /\(.png|.jpg|.gif)$/,
+      //   test: /\.(png|jpg|gif)$/,
       //   use: 'file-loader'//默认会在内部生成一张图片到build目录下，把生成的图片的名字返回回来
       // },
       {
-        test: /\(.png|.jpg|.gif)$/,
+        test: /\.(png|jpg|gif)$/,
         use: {
           loader: 'url-loader',
           options: {
-            limit: 200*1024//200k
+            limit: 1,//200k 
+            outputPath: '/img/',
+            esModule: false,
+            // publicPath: 'http://www.xxx.com'//只给图片加入这个公共路径
           }
         }//代替file-loader,做一个限制，当图片小于多少k的时候用base64来转化,否则用file-loader产生真是的图片
       },

@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/a.js":
-/*!******************!*\
-  !*** ./src/a.js ***!
-  \******************/
+/***/ "./src/display.png":
+/*!*************************!*\
+  !*** ./src/display.png ***!
+  \*************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = 'fasdf';\n\n//# sourceURL=webpack:///./src/a.js?");
+eval("module.exports = __webpack_require__.p + \"032c037f1bb6f41f912521ebe980613b.png\";\n\n//# sourceURL=webpack:///./src/display.png?");
 
 /***/ }),
 
@@ -112,21 +112,11 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var str = __webpack_require__(/*! ./a.js */ \"./src/a.js\");\n\nconsole.log(str + \"12\");\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n__webpack_require__(/*! ./index.less */ \"./src/index.less\");\n\nvar fn = function fn() {\n  console.log('log');\n};\n\nfn();\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/index.less":
-/*!************************!*\
-  !*** ./src/index.less ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index.less?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _display_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./display.png */ \"./src/display.png\");\n/* harmony import */ var _display_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_display_png__WEBPACK_IMPORTED_MODULE_1__);\n// import $ from 'jquery'\n// console.log($)//每个模块可以直接使用$\n//1)在js中创建图片来引入\n\n\nvar image = new Image();\nimage.src = _display_png__WEBPACK_IMPORTED_MODULE_1___default.a;\ndocument.body.append(image); // let str = require('./a.js')\n// console.log(str+\"12\")\n// require('./index.css')\n// require('./index.less')\n// let fn = () => {\n//     console.log('log')\n// }\n// fn()\n// @log\n// class A{\n//     a=1\n// } \n// let a = new A()\n// console.log(a.a)\n// function log(target) {\n//     console.log(target)\n// }\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

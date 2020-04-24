@@ -1,0 +1,9 @@
+@import './a.css';
+body{
+  background-color: burlywood;
+}
+div{
+  width: 675px;
+  height: 372px;
+  background: url('./display.png');
+}

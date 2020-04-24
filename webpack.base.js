@@ -4,7 +4,6 @@ let {CleanWebpackPlugin} = require('clean-webpack-plugin')
 let CopyWebpackPlugin = require('copy-webpack-plugin')
 let webpack = require('webpack')
 module.exports = {
-  mode: 'production',
   entry: {
     home: './src/index.js'
   },
@@ -32,6 +31,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
+     
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: 'index.html'

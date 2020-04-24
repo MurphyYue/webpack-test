@@ -8,6 +8,7 @@
     "dev": "webpack-dev-server"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "expose-loader": "^0.7.5",
     "html-webpack-plugin": "^4.2.0",
     "jquery": "^3.5.0",
@@ -23,6 +24,8 @@
     "@babel/preset-env": "^7.9.5",
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.5.2",
     "file-loader": "^6.0.0",
     "html-withimg-loader": "^0.1.16",
@@ -33,7 +36,9 @@
     "postcss-loader": "^3.0.0",
     "style-loader": "^1.1.4",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^4.1.0"
+    "url-loader": "^4.1.0",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-merge": "^4.2.2"
   },
   "browserslist": [
     "last 1 version",

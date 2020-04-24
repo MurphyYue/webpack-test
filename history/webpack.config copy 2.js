@@ -1,41 +1,38 @@
-
 let path = require('path')
-let HtmlWebpackPlugin = require("html-webpack-plugin")
-let MiniCssExtractPlugin = require("mini-css-extract-plugin")
+let HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  output: {
-    filename: 'bundle.[hash:10].js',
-    path: path.resolve(__dirname, 'build'),
+  mode: 'production',
+  entry: {
+    home: './src/index.js'
   },
-  plugins: [//插件使用顺序无先后
+  watch: true,
+  watchOptions: {
+    poll: 1000,//每秒询问1000次
+    aggregateTimeout: 500,//防抖，500ms
+    ignored: /node_modules/ //
+  },
+  output: {
+    //[name]代表home或者other 
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-      hash: true,
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'main.css'
+      template: './index.html',
+      filename: 'index.html'
     })
   ],
   module: {
     rules: [
-      { test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader, //抽离出css
-          'css-loader',
-          'postcss-loader'//个css加前缀，所以要先处理这个后处理css-loader
-        ] 
-      },
-      { test: /\.less$/,
-        use: [
-          MiniCssExtractPlugin.loader, 
-          'css-loader',
-          'postcss-loader',
-          'less-loader'
-        ] 
-     }
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
     ]
   }
-} 
+}
