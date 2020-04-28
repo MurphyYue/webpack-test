@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/lib/node_modules/node/bin/node /usr/local/bin/yarn add webpack-merge -D
+  /usr/local/lib/node_modules/node/bin/node /usr/local/bin/yarn add moment
 
 PATH: 
-  /Users/murphy/anaconda3/bin:/Users/murphy/anaconda3/condabin:/Users/murphy/development/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/murphy/Library/Android/sdk/emulator:/Users/murphy/Library/Android/sdk/tools:/Users/murphy/Library/Android/sdk/platform-tools:/Users/murphy/Library/Android/sdk/tools/bin
+  /Users/murphy/development/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/murphy/anaconda3/bin:/Users/murphy/anaconda3/condabin:/Users/murphy/development/flutter/bin:/Users/murphy/Library/Android/sdk/emulator:/Users/murphy/Library/Android/sdk/tools:/Users/murphy/Library/Android/sdk/platform-tools:/Users/murphy/Library/Android/sdk/tools/bin:/Users/murphy/Library/Android/sdk/emulator:/Users/murphy/Library/Android/sdk/tools:/Users/murphy/Library/Android/sdk/platform-tools:/Users/murphy/Library/Android/sdk/tools/bin
 
 Yarn version: 
   1.21.1
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/webpack-merge: ETIMEDOUT
+  Error: https://registry.yarnpkg.com/moment: ETIMEDOUT
       at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141325:19)
       at ontimeout (timers.js:436:11)
       at tryOnTimeout (timers.js:300:5)
@@ -61,7 +61,8 @@ npm manifest:
       "style-loader": "^1.1.4",
       "uglifyjs-webpack-plugin": "^2.2.0",
       "url-loader": "^4.1.0",
-      "webpack-dev-middleware": "^3.7.2"
+      "webpack-dev-middleware": "^3.7.2",
+      "webpack-merge": "^4.2.2"
     },
     "browserslist": [
       "last 1 version",
@@ -6557,6 +6558,13 @@ Lockfile:
     dependencies:
       ansi-colors "^3.0.0"
       uuid "^3.3.2"
+  
+  webpack-merge@^4.2.2:
+    version "4.2.2"
+    resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
+    integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
+    dependencies:
+      lodash "^4.17.15"
   
   webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     version "1.4.3"

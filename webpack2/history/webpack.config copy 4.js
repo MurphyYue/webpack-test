@@ -1,7 +1,6 @@
 let path = require('path')
 let HtmlWebpackPlugin = require("html-webpack-plugin")
 let webpack = require('webpack')
-let Happypack = require("happypack")
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -15,26 +14,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new Happypack({
-      id: 'css',
-      use: [//多线程打包css时用到的loader
-        'style-loader', 'css-loader'
-      ]
-    }),
-    new Happypack({
-      id: 'js',
-      use: [//多线程打包js时用到的loader
-        {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react'
-            ]
-          }
-        }
-      ]
-    }),
     new HtmlWebpackPlugin({
       template: './public/index.html'
     }),
@@ -47,11 +26,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,//排除node_modules中的文件，不去解析
         // include: path.resolve('src'),//或者用include属性，指定包含的目录
-        use: 'Happypack/loader?id=js'//以js结尾的采用多线程打包
-      },
-      {
-        test: /\.css$/,
-        use: 'Happypack/loader?id=css'//以css结尾的采用多线程打包
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ]
+          }
+        }
       }
     ]
   }
